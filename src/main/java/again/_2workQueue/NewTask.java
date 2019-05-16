@@ -18,6 +18,7 @@ public class NewTask {
         factory.setHost("192.168.150.129");
         Connection connection = factory.newConnection();
         Channel channel = connection.createChannel();
+
         channel.queueDeclare(TASK_QUEUE_NAME, true, false, false, null);
 
         // 分发消息
